@@ -57,7 +57,7 @@ const AnnualSportsEvent = () => {
         />
       </div>
 
-      <div className="mt-5 md:mt-10">
+      <div className="mt-5 md:mt-12">
         {services.map((service) => (
           <div key={service.id} className="mt-4">
             <motion.div

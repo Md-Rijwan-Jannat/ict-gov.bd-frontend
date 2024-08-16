@@ -32,7 +32,7 @@ const VideoGallery: React.FC = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
       {videos.map((video, index) => (
         <div key={index} className="p-2">
-          <h3 className="rounded-[4px] bg-primaryColor px-3 py-3 text-white-50 text-sm md:text-xl font-semibold text-center h-[80px] mb-3">
+          <h3 className="rounded-[4px] bg-primaryColor px-3 py-3 text-white-50 text-sm md:text-xl font-medium text-center h-[80px] mb-3">
             {language === "bn" ? video.title.bn : video.title.en}
           </h3>
           <iframe

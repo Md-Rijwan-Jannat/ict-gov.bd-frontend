@@ -45,7 +45,7 @@ const VisitorCounterTable = () => {
   };
 
   return (
-    <div className="mt-5 md:mt-10">
+    <div className="mt-5 md:mt-12">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -57,7 +57,7 @@ const VisitorCounterTable = () => {
             ? "ওয়েবসাইট দর্শনার্থী [০৬.১১.২০১৯ তারিখ থেকে কার্যকর]"
             : "Website Visitors [Effective from 06.11.2019]"}
         </div>
-        <div className="bg-green-100 text-green-700 text-sm md:text-lg font-semibold py-2 text-center px-2 mt-4">
+        <div className="bg-green-100 text-green-700 text-sm md:text-lg font-medium py-2 text-center px-2 mt-4">
           {language === "bn" ? "দর্শনার্থী কাউন্টার" : "Visitor Counter"}
         </div>
         <table className="table-auto w-full text-sm md:text-base text-left border text-black-700">

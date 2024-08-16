@@ -142,7 +142,7 @@ const NoticeBroad = () => {
 
   return (
     <div className="p-6 bg-white-50 mt-10 relative h-[1030px] md:h-[850px]">
-      <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-primaryColor">
+      <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center text-primaryColor">
         {language === "bn" ? "নোটিশ বোর্ড" : "Notice Board"}
       </h2>
 
@@ -164,7 +164,7 @@ const NoticeBroad = () => {
               }}
               className="p-4 bg-white-100 rounded-[4px] hover:bg-white-200 hover:bg-opacity-90 bg-opacity-90 border"
             >
-              <h3 className="text-lg md:text-xl font-semibold text-primaryColor">
+              <h3 className="text-lg md:text-xl font-medium text-primaryColor">
                 {notice.title}
               </h3>
               <p className="text-sm text-gray-600 mb-2">{notice.date}</p>
@@ -184,7 +184,7 @@ const NoticeBroad = () => {
       </div>
 
       {/* Pagination */}
-      <div className="mt-5 md:mt-10 absolute top-[950px] md:top-[740px] z-10 inset-0 justify-center items-center">
+      <div className="mt-5 md:mt-12 absolute top-[950px] md:top-[740px] z-10 inset-0 justify-center items-center">
         <NoticePagination
           currentPage={currentPage}
           totalPages={Math.ceil(notices.length / noticesPerPage)}

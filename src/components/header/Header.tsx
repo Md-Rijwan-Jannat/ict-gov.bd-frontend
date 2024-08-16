@@ -4,6 +4,7 @@ import { BsSearch } from "react-icons/bs";
 import Navigation from "./Navigation";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import logo from "../../../public/ict.gov.bd.logo.png";
 
 const Header = () => {
   const { language } = useLanguage();
@@ -17,11 +18,7 @@ const Header = () => {
     <header className="px-2 py-4 bg-gradient-to-r from-primaryColor/95 to-secondaryColor/95 w-full md:h-[150px] relative">
       <div className="flex items-center gap-3 justify-between">
         <div className="flex gap-2 items-center">
-          <img
-            className="w-10"
-            src="../../../public/ict.gov.bd.logo.png"
-            alt="ICT Logo"
-          />
+          <img className="w-10" src={logo} alt="ICT Logo" />
           <h3 className="whitespace-nowrap text-white-50 text-xs md:text-xl">
             {language === "bn" ? (
               <>

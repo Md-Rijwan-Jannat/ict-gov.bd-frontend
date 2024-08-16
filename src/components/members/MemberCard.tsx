@@ -11,7 +11,7 @@ const MemberCard = ({ title, name, role, image }: IMemberProps) => {
   return (
     <div className="bg-white border rounded-[4px] overflow-hidden transform transition-transform duration-300 w-[280px]">
       <motion.h2
-        className="rounded-t-[4px] bg-primaryColor px-3 py-3 text-white-50 text-sm md:text-xl font-semibold text-center"
+        className="rounded-t-[4px] bg-primaryColor px-3 py-3 text-white-50 text-sm md:text-xl font-medium text-center"
         initial={{ opacity: 0, y: -25 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5 }}

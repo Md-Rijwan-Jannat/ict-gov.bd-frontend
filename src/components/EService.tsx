@@ -37,13 +37,13 @@ const EService = () => {
   };
 
   return (
-    <div className="mt-5 md:mt-10">
+    <div className="mt-5 md:mt-12">
       <div className="text-center mb-6">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="rounded-[4px] bg-primaryColor px-3 py-3 text-white-50 text-lg md:text-xl font-semibold text-center "
+          className="rounded-[4px] bg-primaryColor px-3 py-3 text-white-50 text-lg md:text-xl font-medium text-center "
         >
           {language === "bn" ? "অভ্যন্তরীণ ই-সেবাসমূহ" : "Internal E-Services"}
         </motion.h1>
@@ -80,7 +80,7 @@ const EService = () => {
           {language === "bn" ? "সকল" : "All"}
         </motion.span>
       </motion.div>
-      <div className="text-center mt-5 md:mt-10">
+      <div className="text-center mt-5 md:mt-12">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}

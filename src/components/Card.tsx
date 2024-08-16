@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Card = () => {
   const { language } = useLanguage() as { language: Language };
   return (
-    <div className="mt-5 md:mt-10">
+    <div className="mt-5 md:mt-12">
       <div className="mt-4">
         <motion.div
           initial={{ opacity: 0, y: -25 }}

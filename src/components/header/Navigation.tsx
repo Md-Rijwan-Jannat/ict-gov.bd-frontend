@@ -19,7 +19,7 @@ const Navigation = ({ isMenuOpen }: NavigationProps) => {
   return (
     <nav className="relative mt-4 z-50 w-full">
       <div
-        className={` w-full bg-white-50 rounded px-3 py-1 ${
+        className={`w-full bg-white-50 rounded px-3 py-1 ${
           isMenuOpen ? "block" : "hidden"
         } md:block`}
       >
@@ -30,12 +30,17 @@ const Navigation = ({ isMenuOpen }: NavigationProps) => {
             </button>
           </li>
           {Object.entries(texts[language]).map(([key, sections]) => (
-            <li key={key} className="relative">
+            <li
+              key={key}
+              className="relative group"
+              onMouseEnter={() => setOpenMenu(key)}
+              onMouseLeave={() => setOpenMenu(null)}
+            >
               <button
                 onClick={() => handleMenuToggle(key)}
                 className="flex items-center space-x-2 p-2 hover:bg-white-300 rounded-[3px] transition-colors duration-500 ease-in-out"
               >
-                <span className="text[10px] md:text-sm">
+                <span className="text-[10px] md:text-sm">
                   {key === "sections1"
                     ? language === "en"
                       ? "About Us"
@@ -71,8 +76,8 @@ const Navigation = ({ isMenuOpen }: NavigationProps) => {
                 />
               </button>
               {openMenu === key && (
-                <div className=" bg-white-50">
-                  <ul className="absolute top-full left-0 mt-2 md:mt-4 md:p-3 z-20 bg-white-50 rounded-[3px] md:flex">
+                <div className="absolute top-full left-0 md:p-3 z-20">
+                  <ul className=" bg-white-50 rounded-[3px] md:flex">
                     {sections.map((section: Section, sectionIdx: number) => (
                       <div key={sectionIdx} className="p-2 flex-1">
                         <li className="font-bold mb-2 whitespace-nowrap text-[10px] md:text-sm">

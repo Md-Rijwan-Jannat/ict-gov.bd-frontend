@@ -7,7 +7,7 @@ const EmergencyHotline = () => {
   const { language } = useLanguage() as { language: Language };
 
   return (
-    <div className="mt-5 md:mt-10">
+    <div className="mt-5 md:mt-12">
       {/* Animated Title */}
       <div className="rounded-[4px] bg-primaryColor px-3 py-3 text-white-50 text-lg md:text-xl font-medium text-center ">
         {language === "bn" ? "জরুরি হটলাইন" : "Emergency Hotline"}

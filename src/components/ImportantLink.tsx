@@ -38,14 +38,14 @@ const ImportantLink = () => {
   };
 
   return (
-    <div className="mt-5 md:mt-10">
+    <div className="mt-5 md:mt-12">
       {/* Important Links Section */}
       <div className="text-center mb-6 mt-10">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="rounded-[4px] bg-primaryColor px-3 py-3 text-white-50 text-lg md:text-xl font-semibold text-center"
+          className="rounded-[4px] bg-primaryColor px-3 py-3 text-white-50 text-lg md:text-xl font-medium text-center"
         >
           {language === "bn" ? "গুরুত্বপূর্ণ লিংক" : "Important Links"}
         </motion.h1>
