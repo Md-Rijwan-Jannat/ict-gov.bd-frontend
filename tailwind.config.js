@@ -1,11 +1,14 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const withMT = require("@material-tailwind/react/utils/withMT");
+module.exports = withMT({
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    "path-to-your-node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
+    "path-to-your-node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
   ],
   prefix: "",
   theme: {
@@ -20,6 +23,7 @@ module.exports = {
       colors: {
         // Your custom colors
         primaryColor: "#098346", // Green
+        hoverPrimaryColor: "#259c61",
         secondaryColor: "#DA0000", // Red
         backgroundColor: "#FFFFFF", // White
 
@@ -109,4 +113,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-};
+});

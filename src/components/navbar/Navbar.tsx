@@ -1,38 +1,76 @@
 import {
   Select,
+  SelectTrigger,
   SelectContent,
   SelectGroup,
-  SelectItem,
   SelectLabel,
-  SelectTrigger,
+  SelectItem,
   SelectValue,
 } from "../ui/select";
+import PrimaryButton from "../button/PrimaryButton";
+import { useLanguage } from "@/context/LanguageContextProvider";
 
 const Navbar = () => {
+  const { language, toggleLanguage } = useLanguage();
+
   return (
-    <div className="bg-white-400 px-2 py-3">
-      <nav className="flex justify-start gap-5 items-center">
-        <div>
-          <p className="text-sm">বাংলাদেশ জাতীয় তথ্য বাতায়ন</p>
-        </div>
+    <nav className="flex justify-between items-center gap-5 w-full bg-white-400 px-2 py-2">
+      <div className="flex items-center gap-5">
+        <p className="text-[8px] md:text-sm">
+          {language === "bn"
+            ? "বাংলাদেশ জাতীয় তথ্য বাতায়ন"
+            : "National Portal of Bangladesh"}
+        </p>
         <Select>
-          <SelectTrigger className="w-[180px] rounded-[8px] border-black-500">
-            <SelectValue placeholder="অফিসের ধরণ" />
+          <SelectTrigger className="w-[130px] md:w-[180px] rounded-[8px] border-black-500 text-[8px] md:text-sm">
+            <SelectValue
+              placeholder={language === "bn" ? "অফিসের ধরণ" : "Office Type"}
+            />
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
-              <SelectLabel>অফিসের ধরণ</SelectLabel>
-              <SelectItem value="মন্ত্রণালয়/বিভাগ">মন্ত্রণালয়/বিভাগ</SelectItem>
-              <SelectItem value="অধিদপ্তর বাতায়ন">অধিদপ্তর বাতায়ন</SelectItem>
-              <SelectItem value="বিভাগীয় বাতায়ন">বিভাগীয় বাতায়ন</SelectItem>
-              <SelectItem value="জেলা বাতায়ন">জেলা বাতায়ন</SelectItem>
-              <SelectItem value="ইউনিয়ন বাতায়ন">ইউনিয়ন বাতায়ন</SelectItem>
-              <SelectItem value="অন্যান্য">অন্যান্য</SelectItem>
+              <SelectLabel className="text-[8px] md:text-sm">
+                {language === "bn" ? "অফিসের ধরণ" : "Office Type"}
+              </SelectLabel>
+              <SelectItem
+                className="text-[8px] md:text-sm"
+                value="মন্ত্রণালয়/বিভাগ"
+              >
+                {language === "bn" ? "মন্ত্রণালয়/বিভাগ" : "Ministry/Division"}
+              </SelectItem>
+              <SelectItem
+                className="text-[8px] md:text-sm"
+                value="অধিদপ্তর বাতায়ন"
+              >
+                {language === "bn" ? "অধিদপ্তর বাতায়ন" : "Directorate Portal"}
+              </SelectItem>
+              <SelectItem
+                className="text-[8px] md:text-sm"
+                value="বিভাগীয় বাতায়ন"
+              >
+                {language === "bn" ? "বিভাগীয় বাতায়ন" : "Divisional Portal"}
+              </SelectItem>
+              <SelectItem className="text-[8px] md:text-sm" value="জেলা বাতায়ন">
+                {language === "bn" ? "জেলা বাতায়ন" : "District Portal"}
+              </SelectItem>
+              <SelectItem
+                className="text-[8px] md:text-sm"
+                value="ইউনিয়ন বাতায়ন"
+              >
+                {language === "bn" ? "ইউনিয়ন বাতায়ন" : "Union Portal"}
+              </SelectItem>
+              <SelectItem className="text-[8px] md:text-sm" value="অন্যান্য">
+                {language === "bn" ? "অন্যান্য" : "Others"}
+              </SelectItem>
             </SelectGroup>
           </SelectContent>
         </Select>
-      </nav>
-    </div>
+      </div>
+      <PrimaryButton
+        onClick={toggleLanguage}
+        text={language === "bn" ? "English" : "বাংলা"}
+      />
+    </nav>
   );
 };
 
