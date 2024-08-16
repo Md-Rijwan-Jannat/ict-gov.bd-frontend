@@ -14,16 +14,23 @@ import EmergencyHotline from "../EmergencyHotline";
 import PreventDengue from "../PreventDengue";
 import OurResponsibility from "../OurResponsibility";
 import VideoGallery from "../VideoGallery";
+import ModalGroup from "../modal/ModalGroup";
 
 const MainLayout = () => {
   return (
-    <main className="container mx-auto px-2 md:-px-4 bg-white-50 shadow">
+    <main className="container mx-auto px-2 md:px-4 bg-white-50 shadow relative">
       <nav>
         <Navbar />
       </nav>
       <header>
         <Header />
       </header>
+      {/* Adjusted Modal Group styling */}
+      <div className="fixed z-30 inset-0 flex items-center justify-end p-4 pointer-events-none">
+        <div className="pointer-events-auto">
+          <ModalGroup />
+        </div>
+      </div>
       <Banner />
       <section className="my-5">
         <MembersSection />
@@ -33,7 +40,7 @@ const MainLayout = () => {
             <OurResponsibility />
             <VideoGallery />
           </div>
-          <div className="w-full md:w-4/12  mt-6 md:mt-10">
+          <div className="w-full md:w-4/12 mt-6 md:mt-10">
             <AdmissionForm />
             <AnnualSportsEvent />
             <EService />

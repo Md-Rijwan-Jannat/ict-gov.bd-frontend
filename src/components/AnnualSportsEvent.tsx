@@ -42,7 +42,7 @@ const AnnualSportsEvent = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5 }}
         whileTap={{ scale: 1.12 }}
-        className="rounded-[4px] bg-white-200 border px-3 py-3 50 text-center cursor-pointer mt-5"
+        className="text-sm md:text-[16px] rounded-[4px] bg-white-200 border px-3 py-3 50 text-center cursor-pointer mt-5"
       >
         {language === "bn"
           ? "বার্ষিক কর্মসম্পাদন চুক্তি (এপিএ) ২০২০-২০২১ এর চূড়ান্ত মূল্যায়নে তথ্য ও যোগাযোগ প্রযুক্তি বিভাগের প্রথম স্থান অর্জন"

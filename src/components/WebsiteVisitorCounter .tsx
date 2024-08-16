@@ -52,15 +52,15 @@ const VisitorCounterTable = () => {
         transition={{ duration: 0.5 }}
         className=""
       >
-        <div className="rounded-[4px] bg-primaryColor px-3 py-3 text-white-50 text-sm md:text-xl font-semibold text-center ">
+        <div className="rounded-[4px] bg-primaryColor px-3 py-3 text-white-50 text-lg md:text-xl font-medium text-center ">
           {language === "bn"
             ? "ওয়েবসাইট দর্শনার্থী [০৬.১১.২০১৯ তারিখ থেকে কার্যকর]"
             : "Website Visitors [Effective from 06.11.2019]"}
         </div>
-        <div className="bg-green-100 text-green-700 text-lg font-semibold py-2 text-center px-2 mt-4">
+        <div className="bg-green-100 text-green-700 text-sm md:text-lg font-semibold py-2 text-center px-2 mt-4">
           {language === "bn" ? "দর্শনার্থী কাউন্টার" : "Visitor Counter"}
         </div>
-        <table className="table-auto w-full text-sm md:text-base text-left border">
+        <table className="table-auto w-full text-sm md:text-base text-left border text-black-700">
           <tbody>
             <tr className="border-b">
               <td className="px-4 py-2">

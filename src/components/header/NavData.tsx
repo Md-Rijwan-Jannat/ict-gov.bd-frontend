@@ -36,9 +36,7 @@ export const texts: TextsByLanguage = {
       },
       {
         title: "Committees",
-        items: [
-          "Committees Related to the Honorable Prime Minister and Minister",
-        ],
+        items: ["Committees Related to the Honorable Minister"],
       },
     ],
     sections2: [{ title: "", items: ["List of Offices/Agencies"] }],
@@ -52,7 +50,7 @@ export const texts: TextsByLanguage = {
     sections4: [{ title: "", items: ["Photo Gallery", "Video Gallery"] }],
     sections5: [
       {
-        title: "",
+        title: "Laws and Regulations",
         items: [
           "Laws and Regulations",
           "Policies",
@@ -63,7 +61,7 @@ export const texts: TextsByLanguage = {
     ],
     sections6: [
       {
-        title: "",
+        title: "Smart Dashboard",
         items: [
           "Innovation Information System Management",
           "Casual Leave Management",
@@ -124,7 +122,7 @@ export const texts: TextsByLanguage = {
       {
         title: "মন্ত্রণালয়/বিভাগের কমিটিসমূহ",
         items: [
-          "মাননীয় প্রধানমন্ত্রীর এবং মাননীয় মন্ত্রীর সম্পৃক্ত মন্ত্রণালয়/বিভাগ সম্পর্কিত কমিটিসমূহ",
+          "মাননীয় মন্ত্রীর সম্পৃক্ত মন্ত্রণালয়/বিভাগ সম্পর্কিত কমিটিসমূহ",
         ],
       },
     ],
@@ -139,7 +137,7 @@ export const texts: TextsByLanguage = {
     sections4: [{ title: "", items: ["ফটো গ্যালারি", "ভিডিও গ্যালারি"] }],
     sections5: [
       {
-        title: "",
+        title: "আইন ও বিধি",
         items: [
           "আইন ও বিধি",
           "নীতিমালা",
@@ -150,7 +148,7 @@ export const texts: TextsByLanguage = {
     ],
     sections6: [
       {
-        title: "",
+        title: "স্মার্ট ড্যাশবোর্ড",
         items: [
           "ইনোভেশন ইনফরমেশন সিস্টেম ম্যানেজমেন্ট",
           "নৈমিত্তিক ছুটি ব্যবস্থাপনা",

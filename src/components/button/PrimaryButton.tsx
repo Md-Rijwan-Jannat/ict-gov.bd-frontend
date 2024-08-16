@@ -16,7 +16,7 @@ const PrimaryButton = ({ text, onClick }: PrimaryButtonProps) => {
       <Button
         onClick={onClick}
         className="bg-primaryColor text-white-50 rounded text-[8px] md:text-sm px-6 hover:bg-hoverPrimaryColor 
-                   transition-colors duration-500 ease-in-out"
+                   transition-colors duration-500 ease-in-out w-[80px] md:[110px]"
       >
         {text}
       </Button>

@@ -21,7 +21,7 @@ const MemberCard = ({ title, name, role, image }: IMemberProps) => {
       <img src={image} alt={name} className="w-full h-[320px] object-cover" />
       <div className="p-6 text-center">
         <motion.h2
-          className="text-2xl font-bold text-primaryColor mb-2 whitespace-nowrap"
+          className="text-xl md:text-2xl font-bold text-primaryColor mb-2 whitespace-nowrap"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -29,7 +29,7 @@ const MemberCard = ({ title, name, role, image }: IMemberProps) => {
           {title}
         </motion.h2>
         <motion.p
-          className="text-lg text-gray-700 mb-4"
+          className="text-sm md:text-lg text-gray-700 mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
@@ -37,7 +37,7 @@ const MemberCard = ({ title, name, role, image }: IMemberProps) => {
           {name}
         </motion.p>
         <motion.button
-          className="text-secondaryColor font-semibold underline transition-colors duration-300 text-center w-full"
+          className="text-secondaryColor font-semibold underline transition-colors duration-300 text-center w-full text-xs md:text-sm"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.9 }}

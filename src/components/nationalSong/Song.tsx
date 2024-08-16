@@ -158,7 +158,7 @@ Ami Porer Ghore Kinbo Na Ar, Ma, Tor Bhushon Bole Golar Fansi.`;
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="text-2xl mt-2 font-bold mb-4 text-center text-secondaryColor"
+        className="text-xl md:text-2xl mt-2 font-bold mb-4 text-center text-secondaryColor"
       >
         {language === "bn" ? "আমার সোনার বাংলা" : "Amar Shonar Bangla"}
       </motion.h2>
@@ -254,11 +254,11 @@ Ami Porer Ghore Kinbo Na Ar, Ma, Tor Bhushon Bole Golar Fansi.`;
         </div>
       </div>
       <div className="mt-4">
-        <h3 className="bg-primaryColor rounded-full px-4 py-2 text-white-50 text-center mt-2">
+        <h3 className="bg-primaryColor rounded-full px-4 py-2 text-white-50 text-center mt-2 text-lg">
           {" "}
           {language === "bn" ? "জাতীয় সংগীত" : "National anthem"}
         </h3>
-        <p className="text-center mt-2">
+        <p className="text-center mt-2 text-xs md:text-sm">
           {isExpanded
             ? language === "bn"
               ? lyricsBangla
@@ -268,7 +268,7 @@ Ami Porer Ghore Kinbo Na Ar, Ma, Tor Bhushon Bole Golar Fansi.`;
             : lyricsBanglish.split("\n").slice(0, 4).join("\n")}
         </p>
         <button
-          className="block mx-auto mt-2 text-primaryColor underline"
+          className="block mx-auto mt-2 text-primaryColor underline text-[10px] md:text-sm"
           onClick={() => setIsExpanded(!isExpanded)}
         >
           {isExpanded

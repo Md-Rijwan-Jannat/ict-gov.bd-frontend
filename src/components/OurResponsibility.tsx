@@ -382,7 +382,6 @@ const OurResponsibility: React.FC = () => {
         <motion.div
           key={index}
           className="p-4 rounded-[4px] border bg-white-100 transition-shadow duration-300 hover:shadow"
-          whileHover={{ scale: 1.02 }}
         >
           {item.image && (
             <div className="flex items-center justify-center">
@@ -395,7 +394,7 @@ const OurResponsibility: React.FC = () => {
           )}
           <div className="mt-4">
             <motion.h3
-              className="text-lg font-semibold mb-4 text-primaryColor text-center"
+              className="text-sm md:text-lg font-semibold mb-4 text-primaryColor text-center"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -411,7 +410,7 @@ const OurResponsibility: React.FC = () => {
               {item.bulletPoints.map((point, i) => (
                 <motion.div
                   key={i}
-                  className="mb-1 flex items-center gap-2 w-full border border-white-50 px-2 py-1 rounded-[4px] hover:border hover:bg-white-200 hover:text-black"
+                  className="mb-1 flex items-center gap-2 w-full border border-white-50 px-2 py-1 rounded-[4px] hover:border hover:bg-white-200 hover:text-black text-xs md:text-sm"
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.2 + i * 0.1 }}

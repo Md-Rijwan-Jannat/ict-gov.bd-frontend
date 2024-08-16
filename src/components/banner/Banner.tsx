@@ -54,7 +54,7 @@ const Banner = () => {
             <>
               <motion.h1
                 key={currentBanner}
-                className="text-xl md:text-3xl font-bold"
+                className="text-lg md:text-3xl font-bold"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -50 }}

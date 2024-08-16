@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <header className="px-2 py-4 bg-gradient-to-r from-primaryColor/95 to-secondaryColor/95 w-full md:h-[150px] relative">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center gap-3 justify-between">
         <div className="flex gap-2 items-center">
           <img
             className="w-10"
@@ -42,9 +42,9 @@ const Header = () => {
             <Input
               type="text"
               placeholder={language === "bn" ? "অনুসন্ধান" : "Search"}
-              className="w-full md:w-[400px] px-2 md:px-4  md:py-2 text-[10px] md:text-sm rounded border border-white-500 text-white-500 placeholder:text-white-500"
+              className="w-full md:w-[400px] px-1 h-[35px] md:h-auto md:px-4  md:py-2 text-[10px] md:text-sm rounded border border-white-500 text-white-500 placeholder:text-white-500"
             />
-            <BsSearch className="absolute right-2 md:right-3 text-white-500" />
+            <BsSearch className="absolute right-2 md:right-3 text-white-500 size-3 md:size-4" />
           </div>
           <button
             className="md:hidden"
@@ -52,9 +52,9 @@ const Header = () => {
             aria-label="Toggle Navigation Menu"
           >
             {isMenuOpen ? (
-              <FaTimes className="size-5 text-white-50" />
+              <FaTimes className="size-4 text-white-50" />
             ) : (
-              <FaBars className="size-5 text-white-50" />
+              <FaBars className="size-4 text-white-50" />
             )}
           </button>
         </div>

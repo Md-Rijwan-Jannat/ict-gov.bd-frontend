@@ -10,7 +10,7 @@ const AdmissionForm = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.5 }}
       whileTap={{ scale: 1.12 }}
-      className="rounded-[4px] bg-white-200 border px-3 py-3 50 text-center cursor-pointer mt-5"
+      className="text-sm md:text-[16px] rounded-[4px] bg-white-200 border px-3 py-3 50 text-center cursor-pointer mt-5"
     >
       {language === "bn"
         ? "অফিস সংযুক্তির আবেদন ফরম"

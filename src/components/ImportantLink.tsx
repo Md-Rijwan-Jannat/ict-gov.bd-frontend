@@ -45,7 +45,7 @@ const ImportantLink = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="rounded-[4px] bg-primaryColor px-3 py-3 text-white-50 text-sm md:text-xl font-semibold text-center"
+          className="rounded-[4px] bg-primaryColor px-3 py-3 text-white-50 text-lg md:text-xl font-semibold text-center"
         >
           {language === "bn" ? "গুরুত্বপূর্ণ লিংক" : "Important Links"}
         </motion.h1>
@@ -58,10 +58,10 @@ const ImportantLink = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5 }}
             whileTap={{ scale: 1.12 }}
-            className="bg-white-200 p-4 rounded-[4px] border text-black-800 text-sm md:text-[16px] flex items-center gap-2 cursor-pointer"
+            className="bg-white-200 p-4 rounded-[4px] border text-black-800 flex items-center gap-2 cursor-pointer"
           >
             <FaRegSquareCheck className="text-primaryColor size-6" />
-            <p className="text-lg font-medium">{link}</p>
+            <p className="text-sm md:text-[16px] font-medium">{link}</p>
           </motion.div>
         ))}
       </div>

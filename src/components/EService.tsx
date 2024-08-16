@@ -43,7 +43,7 @@ const EService = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="rounded-[4px] bg-primaryColor px-3 py-3 text-white-50 text-sm md:text-xl font-semibold text-center "
+          className="rounded-[4px] bg-primaryColor px-3 py-3 text-white-50 text-lg md:text-xl font-semibold text-center "
         >
           {language === "bn" ? "অভ্যন্তরীণ ই-সেবাসমূহ" : "Internal E-Services"}
         </motion.h1>
@@ -59,7 +59,7 @@ const EService = () => {
             className="bg-white-200 p-4 rounded-[4px] border text-black-800 text-sm md:text-[16px] flex items-center gap-2 cursor-pointer"
           >
             <FaRegSquareCheck className="text-primaryColor size-6" />
-            <p className="text-lg font-medium">{service}</p>
+            <p className="text-sm md:text-[16px] font-medium">{service}</p>
           </motion.div>
         ))}
       </div>
@@ -89,7 +89,7 @@ const EService = () => {
             scale: 1.05,
             transition: { duration: 0.3, ease: "easeInOut" },
           }}
-          className="rounded-[4px] bg-white-200 border px-3 py-3 50 text-center cursor-pointer mt-5"
+          className="rounded-[4px] bg-white-200 border px-3 py-3 50 text-center cursor-pointer mt-5 text-sm md:text-[16px]"
         >
           {language === "bn" ? "কেন্দ্রীয় ই-সেবা" : "Central E-Services"}
         </motion.h1>

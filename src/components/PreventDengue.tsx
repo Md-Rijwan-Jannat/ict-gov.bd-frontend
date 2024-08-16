@@ -9,21 +9,23 @@ const PreventDengue = () => {
   return (
     <div className="mt-5 md:mt-10">
       {/* Animated Title */}
-      <div className="rounded-[4px] bg-primaryColor px-3 py-3 text-white-50 text-sm md:text-xl font-semibold text-center ">
+      <div className="rounded-[4px] bg-primaryColor px-3 py-3 text-white-50 text-lg md:text-xl font-medium text-center ">
         {language === "bn"
           ? "ডেঙ্গু প্রতিরোধে করণীয়"
           : "What to do to prevent dengue"}
       </div>
 
       {/* Emergency Hotline Image */}
-      <motion.img
-        src="https://ictd.gov.bd/sites/default/files/files/admin.portal.gov.bd/npfblock//dengu.jpg"
-        alt="Emergency Hotline"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeInOut" }}
-        className="w-full max-w-sm md:max-w-md mt-3"
-      />
+      <div className="flex items-center justify-center ">
+        <motion.img
+          src="https://ictd.gov.bd/sites/default/files/files/admin.portal.gov.bd/npfblock//dengu.jpg"
+          alt="Emergency Hotline"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeInOut" }}
+          className="w-full max-w-sm md:max-w-md mt-3"
+        />
+      </div>
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
