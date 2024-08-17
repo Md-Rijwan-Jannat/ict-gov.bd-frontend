@@ -2,6 +2,22 @@
 
 Welcome to the official repository for the redesign of the Government of Bangladesh's তথ্য ও যোগাযোগ প্রযুক্তি (ICT) landing page. This project aims to modernize the landing page, making it more user-friendly, accessible, and visually appealing while preserving the cultural and national significance of the content.
 
+## Live Demo
+
+You can access the live site here:
+
+[Live Site on Vercel](https://ict-gov-bd.vercel.app/)
+
+# Loom Pagination Tutorial
+
+This section provides a tutorial on implementing pagination in your project.
+
+## Video Tutorial
+
+You can watch the detailed video tutorial on pagination here:
+
+[Loom Video Tutorial](https://www.loom.com/share/3952b05883384493a79f996e97093e22?sid=16669f11-fd1b-4f89-9f0f-835f5a85f655)
+
 ## Table of Contents
 
 - [Project Overview](#project-overview)
