@@ -103,15 +103,14 @@ const AccessibilityModal = () => {
           isInverted ? "invert-modal-content" : ""
         }`}
         style={{
-          // Center the modal on the screen
           position: "fixed",
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          maxWidth: "90vw", // Prevent modal from being too wide
-          maxHeight: "90vh", // Prevent modal from being too tall
-          overflow: "auto", // Handle overflow if the content is too large
-          zIndex: 1000, // Ensure the modal is above other content
+          maxWidth: "90vw",
+          maxHeight: "90vh",
+          overflow: "auto",
+          zIndex: 1000,
         }}
       >
         <motion.div

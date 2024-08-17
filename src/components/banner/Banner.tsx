@@ -46,7 +46,7 @@ const Banner = () => {
         )}
       </AnimatePresence>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-secondaryColor/30 to-primaryColor/30" />
+      <div className="absolute inset-0 bg-gradient-to-r from-primaryColor/5 to-secondaryColor/5" />
 
       <div className="absolute bottom-16 md:bottom-[160px] left-1/2 transform -translate-x-1/2 text-center text-white">
         <AnimatePresence>

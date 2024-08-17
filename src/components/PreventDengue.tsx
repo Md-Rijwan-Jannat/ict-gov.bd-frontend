@@ -34,7 +34,7 @@ const PreventDengue = () => {
           scale: 1.05,
           transition: { duration: 0.3, ease: "easeInOut" },
         }}
-        className="flex flex-col items-center justify-center text-secondaryColor mt-5 cursor-pointer bg-white-500 rounded-full px-2 py-2"
+        className="flex flex-col items-center justify-center text-secondaryColor mt-5 cursor-pointer bg-white-300 rounded-full px-2 py-2 border border-black-400"
       >
         <motion.span
           whileHover={{ color: "#098346" }} // Apply primaryColor on hover

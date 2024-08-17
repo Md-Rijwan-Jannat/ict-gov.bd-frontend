@@ -51,7 +51,19 @@ const PollingModal = () => {
           alt="Polling Icon"
         />
       </DialogTrigger>
-      <DialogContent className="bg-white-50 rounded-lg shadow-lg px-5 pt-10 overflow-y-auto">
+      <DialogContent
+        style={{
+          position: "fixed",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          maxWidth: "90vw",
+          maxHeight: "90vh",
+          overflow: "auto",
+          zIndex: 1000,
+        }}
+        className="bg-white-50 rounded-lg shadow-lg px-5 pt-10 overflow-y-auto"
+      >
         {isFormVisible ? (
           ""
         ) : (

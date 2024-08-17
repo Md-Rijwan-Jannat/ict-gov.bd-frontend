@@ -9,7 +9,7 @@ const EmergencyHotline = () => {
   return (
     <div className="mt-5 md:mt-12">
       {/* Animated Title */}
-      <div className="rounded-[4px] bg-primaryColor px-3 py-3 text-white-50 text-lg md:text-xl font-medium text-center ">
+      <div className="rounded-[4px] bg-gradient-to-r from-primaryColor/95 to-secondaryColor/95 px-3 py-3 text-white-50 text-lg md:text-xl font-medium text-center ">
         {language === "bn" ? "জরুরি হটলাইন" : "Emergency Hotline"}
       </div>
 
@@ -20,7 +20,7 @@ const EmergencyHotline = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeInOut" }}
-        className="w-full max-w-sm md:max-w-md"
+        className="w-full lg:max-w-md"
       />
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -30,7 +30,7 @@ const EmergencyHotline = () => {
           scale: 1.05,
           transition: { duration: 0.3, ease: "easeInOut" },
         }}
-        className="flex flex-col items-center justify-center text-secondaryColor mt-5 cursor-pointer bg-white-500 rounded-full px-2 py-2"
+        className="flex flex-col items-center justify-center text-secondaryColor mt-5 cursor-pointer bg-white-300 rounded-full px-2 py-2 border border-black-400"
       >
         <motion.span
           whileHover={{ color: "#098346" }} // Apply primaryColor on hover

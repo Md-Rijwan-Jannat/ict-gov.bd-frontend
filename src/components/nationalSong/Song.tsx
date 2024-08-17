@@ -11,6 +11,7 @@ import {
   FaVolumeMute,
   FaMusic,
 } from "react-icons/fa";
+import ShahidMinar from "../../assets/images/Shahid minar.png";
 
 const Song = () => {
   const { language } = useLanguage();
@@ -145,147 +146,146 @@ Mori Hay, Hay Re—
 Ami Porer Ghore Kinbo Na Ar, Ma, Tor Bhushon Bole Golar Fansi.`;
 
   return (
-    <div className="p-4">
-      <motion.div
-        className="flex items-center justify-center my-3"
-        initial={{ y: 0 }}
-        animate={{ y: [0, -10, 0] }} // Jump effect: move up and back to the original position
-        transition={{ duration: 0.6, repeat: Infinity, repeatDelay: 1 }} // Duration of one jump, repeat infinitely with a delay of 1 second between repeats
-      >
-        <FaMusic className="size-14 text-white-600" />
-      </motion.div>
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className="text-xl md:text-2xl mt-2 font-bold mb-4 text-center text-secondaryColor"
-      >
-        {language === "bn" ? "আমার সোনার বাংলা" : "Amar Shonar Bangla"}
-      </motion.h2>
-      <div className="flex items-center justify-center gap-4 border rounded-full p-2">
-        <motion.button
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.9 }}
-          className="bg-white p-4 rounded-full shadow-md text-primaryColor"
-          onClick={togglePlayPause}
+    <div className="relative z-10 w-full">
+      <div
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-30 rounded-[4px]"
+        style={{ backgroundImage: `url(${ShahidMinar})` }}
+      ></div>
+
+      <div className="relative p-4">
+        <motion.div
+          className="flex items-center justify-center my-3 mb-28"
+          initial={{ y: 0 }}
+          animate={{ y: [0, -10, 0] }} // Jump effect: move up and back to the original position
+          transition={{ duration: 0.6, repeat: Infinity, repeatDelay: 1 }} // Duration of one jump, repeat infinitely with a delay of 1 second between repeats
         >
-          {isPlaying ? (
-            <FaPause className="size-5" />
-          ) : (
-            <FaPlay className="size-5" />
-          )}
-        </motion.button>
-        <div className="flex-grow">
-          <motion.div
-            className="h-2 rounded-full bg-white-500 overflow-hidden"
-            initial={{ width: 0 }}
-            animate={{ width: `${progress}%` }}
-          >
-            <div className="h-full bg-primaryColor"></div>
-          </motion.div>
-          <div className="flex justify-between text-primaryColor text-sm mt-2">
-            <span>{currentTime}</span>
-            <span>{duration}</span>
-          </div>
-        </div>
-        <div className="relative">
+          <FaMusic className="size-14 text-white-700" />
+        </motion.div>
+        <div className="flex items-center justify-center gap-4 border rounded-full p-2 bg-white-50 bg-opacity-70">
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.9 }}
-            className="bg-black-100 p-2 rounded-full shadow-md text-primaryColor"
-            onClick={() => setShowOptions(!showOptions)}
+            className="bg-white p-4 rounded-full shadow-md text-primaryColor"
+            onClick={togglePlayPause}
           >
-            <FaEllipsisV className="size-4" />
-          </motion.button>
-          {showOptions && (
-            <div className="absolute right-0 top-full mt-3 bg-white text-black-900 rounded-md border w-40 z-10">
-              <button
-                className="w-full text-left p-2 hover:bg-gray-200"
-                onClick={() => handleSpeedChange(0.5)}
-              >
-                0.5x
-              </button>
-              <button
-                className="w-full text-left p-2 hover:bg-gray-200"
-                onClick={() => handleSpeedChange(1)}
-              >
-                1x (Normal)
-              </button>
-              <button
-                className="w-full text-left p-2 hover:bg-gray-200"
-                onClick={() => handleSpeedChange(1.5)}
-              >
-                1.5x
-              </button>
-              <button
-                className="w-full text-left p-2 hover:bg-gray-200"
-                onClick={() => handleSpeedChange(2)}
-              >
-                2x
-              </button>
-              <a
-                href={nationalSong}
-                download="bd_national_anthem.mp3"
-                className="w-full text-left p-2 hover:bg-gray-200 flex items-center"
-              >
-                <FaDownload className="mr-2" />
-                Download
-              </a>
-            </div>
-          )}
-        </div>
-        <div className="flex items-center gap-2">
-          <button className="text-primaryColor p-1" onClick={toggleMute}>
-            {isMuted ? (
-              <FaVolumeMute className="size-4" />
+            {isPlaying ? (
+              <FaPause className="size-5" />
             ) : (
-              <FaVolumeUp className="size-4" />
+              <FaPlay className="size-5" />
             )}
-          </button>
-          <input
-            type="range"
-            min="0"
-            max="1"
-            step="0.01"
-            value={volume}
-            onChange={handleVolumeChange}
-            className="w-14 accent-primaryColor"
-          />
+          </motion.button>
+          <div className="flex-grow">
+            <motion.div
+              className="h-2 rounded-full bg-white-500 overflow-hidden"
+              initial={{ width: 0 }}
+              animate={{ width: `${progress}%` }}
+            >
+              <div className="h-full bg-primaryColor"></div>
+            </motion.div>
+            <div className="flex justify-between text-primaryColor text-sm mt-2">
+              <span>{currentTime}</span>
+              <span>{duration}</span>
+            </div>
+          </div>
+          <div className="relative">
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.9 }}
+              className="bg-black-100 p-2 rounded-full shadow-md text-primaryColor"
+              onClick={() => setShowOptions(!showOptions)}
+            >
+              <FaEllipsisV className="size-4" />
+            </motion.button>
+            {showOptions && (
+              <div className="absolute right-0 top-full mt-3 bg-white text-black-900 rounded-md border w-40 z-10">
+                <button
+                  className="w-full text-left p-2 hover:bg-gray-200"
+                  onClick={() => handleSpeedChange(0.5)}
+                >
+                  0.5x
+                </button>
+                <button
+                  className="w-full text-left p-2 hover:bg-gray-200"
+                  onClick={() => handleSpeedChange(1)}
+                >
+                  1x (Normal)
+                </button>
+                <button
+                  className="w-full text-left p-2 hover:bg-gray-200"
+                  onClick={() => handleSpeedChange(1.5)}
+                >
+                  1.5x
+                </button>
+                <button
+                  className="w-full text-left p-2 hover:bg-gray-200"
+                  onClick={() => handleSpeedChange(2)}
+                >
+                  2x
+                </button>
+                <a
+                  href={nationalSong}
+                  download="bd_national_anthem.mp3"
+                  className="w-full text-left p-2 hover:bg-gray-200 flex items-center"
+                >
+                  <FaDownload className="mr-2" />
+                  Download
+                </a>
+              </div>
+            )}
+          </div>
+          <div className="flex items-center gap-2">
+            <button className="text-primaryColor p-1" onClick={toggleMute}>
+              {isMuted ? (
+                <FaVolumeMute className="size-4" />
+              ) : (
+                <FaVolumeUp className="size-4" />
+              )}
+            </button>
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              value={volume}
+              onChange={handleVolumeChange}
+              className="w-14 accent-primaryColor"
+            />
+          </div>
         </div>
+        <div className="mt-4">
+          <h3 className="bg-gradient-to-r from-primaryColor/95 to-secondaryColor/80 rounded-full px-4 py-2 text-white-50 text-center mt-2 mb-5 text-lg">
+            {" "}
+            {language === "bn" ? "জাতীয় সংগীত" : "National anthem"}
+          </h3>
+          <p className="text-center mt-2 text-xs md:text-sm text-black-800">
+            {isExpanded
+              ? language === "bn"
+                ? lyricsBangla
+                : lyricsBanglish
+              : language === "bn"
+              ? lyricsBangla.split("\n").slice(0, 4).join("\n")
+              : lyricsBanglish.split("\n").slice(0, 4).join("\n")}
+          </p>
+          <button
+            className="block mx-auto mt-2 text-primaryColor underline text-[10px] md:text-sm"
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            {isExpanded
+              ? language === "bn"
+                ? "অপসারণ"
+                : "See Less"
+              : language === "bn"
+              ? "আরও দেখুন"
+              : "See More"}
+          </button>
+        </div>
+        <audio
+          ref={audioRef}
+          src={nationalSong}
+          onTimeUpdate={handleTimeUpdate}
+          onLoadedMetadata={handleLoadedMetadata}
+        />
       </div>
-      <div className="mt-4">
-        <h3 className="bg-primaryColor rounded-full px-4 py-2 text-white-50 text-center mt-2 text-lg">
-          {" "}
-          {language === "bn" ? "জাতীয় সংগীত" : "National anthem"}
-        </h3>
-        <p className="text-center mt-2 text-xs md:text-sm">
-          {isExpanded
-            ? language === "bn"
-              ? lyricsBangla
-              : lyricsBanglish
-            : language === "bn"
-            ? lyricsBangla.split("\n").slice(0, 4).join("\n")
-            : lyricsBanglish.split("\n").slice(0, 4).join("\n")}
-        </p>
-        <button
-          className="block mx-auto mt-2 text-primaryColor underline text-[10px] md:text-sm"
-          onClick={() => setIsExpanded(!isExpanded)}
-        >
-          {isExpanded
-            ? language === "bn"
-              ? "অপসারণ"
-              : "See Less"
-            : language === "bn"
-            ? "আরও দেখুন"
-            : "See More"}
-        </button>
-      </div>
-      <audio
-        ref={audioRef}
-        src={nationalSong}
-        onTimeUpdate={handleTimeUpdate}
-        onLoadedMetadata={handleLoadedMetadata}
-      />
     </div>
   );
 };

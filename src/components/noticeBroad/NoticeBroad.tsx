@@ -142,7 +142,7 @@ const NoticeBroad = () => {
 
   return (
     <div className="p-6 bg-white-50 mt-10 relative h-[1030px] md:h-[850px]">
-      <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center text-primaryColor">
+      <h2 className="text-xl md:text-2xl font-semibold mb-6 text-center text-primaryColor">
         {language === "bn" ? "নোটিশ বোর্ড" : "Notice Board"}
       </h2>
 

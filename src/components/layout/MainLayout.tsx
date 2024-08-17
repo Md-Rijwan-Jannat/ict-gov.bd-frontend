@@ -34,13 +34,13 @@ const MainLayout = () => {
       <Banner />
       <section className="my-5">
         <MembersSection />
-        <div className="flex flex-col md:flex-row gap-4 mt-6">
+        <div className="flex flex-col lg:flex-row gap-4 mt-6">
           <div className="w-full">
             <NoticeBroad />
             <OurResponsibility />
             <VideoGallery />
           </div>
-          <div className="w-full md:w-4/12 mt-6 md:mt-10">
+          <div className="w-full lg:w-4/12 mt-6 md:mt-10">
             <AdmissionForm />
             <AnnualSportsEvent />
             <EService />

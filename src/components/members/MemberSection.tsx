@@ -7,8 +7,8 @@ const MembersSection = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full flex-3 items-center">
-        <div className="flex w-full justify-center md:justify-start">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full flex-3 justify-center items-center">
+        <div className="flex w-full justify-center items-center lg:justify-start">
           <MemberCard
             title={language === "bn" ? "মাননীয় উপদেষ্টা" : "Adviser"}
             name={
@@ -21,7 +21,7 @@ const MembersSection = () => {
         <div>
           <Song />
         </div>
-        <div className="flex w-full justify-center md:justify-end">
+        <div className="flex w-full justify-center lg:justify-end">
           <MemberCard
             title={language === "bn" ? "সচিব" : "Secretary"}
             name={

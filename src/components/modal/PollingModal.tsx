@@ -26,7 +26,19 @@ const PollingModal = () => {
           alt="Polling Icon"
         />
       </DialogTrigger>
-      <DialogContent className="bg-white-50 rounded-lg shadow-lg p-6">
+      <DialogContent
+        style={{
+          position: "fixed",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          maxWidth: "90vw",
+          maxHeight: "90vh",
+          overflow: "auto",
+          zIndex: 1000,
+        }}
+        className="bg-white-50 rounded-lg shadow-lg p-6"
+      >
         <motion.div
           className="grid gap-4 py-4"
           initial={{ opacity: 0, y: -20 }}

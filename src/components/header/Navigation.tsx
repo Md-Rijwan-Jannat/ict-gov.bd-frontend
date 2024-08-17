@@ -17,13 +17,13 @@ const Navigation = ({ isMenuOpen }: NavigationProps) => {
   };
 
   return (
-    <nav className="relative mt-4 z-50 w-full">
+    <nav className="relative mt-4 z-50 w-full mx-2 mr-2">
       <div
-        className={`w-full bg-white-50 rounded px-3 py-1 ${
+        className={`w-full bg-white-50 rounded -ml-2 px-3 py-1 ${
           isMenuOpen ? "block" : "hidden"
-        } md:block`}
+        } lg:block`}
       >
-        <ul className="flex flex-col justify-start items-start md:flex-row md:flex-wrap text-[10px] md:text-sm">
+        <ul className="flex flex-col justify-start items-start lg:flex-row text-[10px] md:text-sm w-[325px] lg:w-full whitespace-nowrap">
           <li className="flex items-center">
             <button className="flex items-center space-x-2 p-2">
               <FaHome className="size-6" />
@@ -77,9 +77,9 @@ const Navigation = ({ isMenuOpen }: NavigationProps) => {
               </button>
               {openMenu === key && (
                 <div className="absolute top-full left-0 md:p-3 z-20">
-                  <ul className=" bg-white-50 rounded-[3px] md:flex">
+                  <ul className=" bg-white-50 rounded-[3px] lg:flex">
                     {sections.map((section: Section, sectionIdx: number) => (
-                      <div key={sectionIdx} className="p-2 flex-1">
+                      <div key={sectionIdx} className="p-2 flex-2">
                         <li className="font-bold mb-2 whitespace-nowrap text-[10px] md:text-sm">
                           {section.title}
                         </li>
